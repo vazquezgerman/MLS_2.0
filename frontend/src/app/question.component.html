@@ -1,7 +1,7 @@
 <mat-card>
     <mat-card-title>
-        <span *ngIf="calle.id">Edit</span>
-        <span *ngIf="!calle.id">Add</span>
+        <span *ngIf="calle.id">Editar Inmueble</span>
+        <span *ngIf="!calle.id">Nuevo Inmueble</span>
     </mat-card-title>
     <mat-card-content>
         <form>
@@ -20,8 +20,8 @@
         </form>
     </mat-card-content>
     <mat-card-actions>
-        <button *ngIf="calle.id" (click)='api.putCalle(calle)' mat-button>Editar</button>
-        <button *ngIf="calle.id" (click)='calle = {}' mat-button>Nuevo</button>
-        <button *ngIf="!calle.id" (click)='post(calle)' mat-button>Guardar</button>
+        <button *ngIf="calle.id" (click)='api.putCalle(calle)' mat-button>Editar Inmueble</button>
+        <button *ngIf="calle.id" (click)='calle = {}' mat-button>Nuevo Inmueble</button>
+        <button *ngIf="!calle.id" (click)='post(calle)' mat-button>Guardar Inmueble</button>
     </mat-card-actions>
 </mat-card>
