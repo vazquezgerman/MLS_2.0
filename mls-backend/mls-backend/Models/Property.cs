@@ -7,6 +7,7 @@ namespace mls_backend.Models
 {
     public class Property
     {
+        public int ID { get; set; }
         public string Calle { get; set; }
     }
 }

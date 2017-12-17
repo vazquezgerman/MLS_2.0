@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;
 
 namespace mls_backend
 {
@@ -27,6 +28,9 @@ namespace mls_backend
             {
                 builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
             }));
+
+            services.AddDbContext<MLSContext>(opt => opt.UseInMemoryDatabase("MLS"));
+
             services.AddMvc();
         }
 

@@ -1,8 +1,17 @@
 <mat-card>
     <mat-card-content>
         <form>
-            <mat-form-field>
-                <input [(ngModel)]="calle.calle" name="calle" matInput placeholder="calle">
+            <mat-form-field class="fullWidth">
+                <input [(ngModel)]="calle.calle" name="calle" matInput placeholder="Calle">
+            </mat-form-field>
+            <mat-form-field class="fullWidth">
+                <input [(ngModel)]="calle.numero" name="numero" matInput placeholder="Numero">
+            </mat-form-field>
+            <mat-form-field class="fullWidth">
+                <input [(ngModel)]="calle.piso" name="piso" matInput placeholder="Piso">
+            </mat-form-field>
+            <mat-form-field class="fullWidth">
+                <input [(ngModel)]="calle.departamento" name="departamento" matInput placeholder="Departamento">
             </mat-form-field>
         </form>
     </mat-card-content>
