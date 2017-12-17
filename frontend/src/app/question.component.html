@@ -1,0 +1,12 @@
+<mat-card>
+    <mat-card-content>
+        <form>
+            <mat-form-field>
+                <input [(ngModel)]="calle.calle" name="calle" matInput placeholder="calle">
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button (click)='post(calle)' mat-button>Guardar</button>
+    </mat-card-actions>
+</mat-card>

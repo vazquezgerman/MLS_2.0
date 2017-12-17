@@ -1,0 +1,11 @@
+C:\Users\German\Documents\GitHub\MLS_2.0\mls-backend\mls-backend\bin\Debug\netcoreapp2.0\mls-backend.deps.json
+C:\Users\German\Documents\GitHub\MLS_2.0\mls-backend\mls-backend\bin\Debug\netcoreapp2.0\mls-backend.runtimeconfig.json
+C:\Users\German\Documents\GitHub\MLS_2.0\mls-backend\mls-backend\bin\Debug\netcoreapp2.0\mls-backend.runtimeconfig.dev.json
+C:\Users\German\Documents\GitHub\MLS_2.0\mls-backend\mls-backend\bin\Debug\netcoreapp2.0\mls-backend.dll
+C:\Users\German\Documents\GitHub\MLS_2.0\mls-backend\mls-backend\bin\Debug\netcoreapp2.0\mls-backend.pdb
+C:\Users\German\Documents\GitHub\MLS_2.0\mls-backend\mls-backend\obj\Debug\netcoreapp2.0\mls-backend.csprojResolveAssemblyReference.cache
+C:\Users\German\Documents\GitHub\MLS_2.0\mls-backend\mls-backend\obj\Debug\netcoreapp2.0\mls-backend.csproj.CoreCompileInputs.cache
+C:\Users\German\Documents\GitHub\MLS_2.0\mls-backend\mls-backend\obj\Debug\netcoreapp2.0\mls-backend.AssemblyInfoInputs.cache
+C:\Users\German\Documents\GitHub\MLS_2.0\mls-backend\mls-backend\obj\Debug\netcoreapp2.0\mls-backend.AssemblyInfo.cs
+C:\Users\German\Documents\GitHub\MLS_2.0\mls-backend\mls-backend\obj\Debug\netcoreapp2.0\mls-backend.dll
+C:\Users\German\Documents\GitHub\MLS_2.0\mls-backend\mls-backend\obj\Debug\netcoreapp2.0\mls-backend.pdb
