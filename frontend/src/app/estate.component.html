@@ -1,0 +1,27 @@
+<mat-card>
+    <mat-card-title>
+        <span *ngIf="estate.id">Editar Inmueble</span>
+        <span *ngIf="!estate.id">Nuevo Inmueble</span>
+    </mat-card-title>
+    <mat-card-content>
+        <form>
+            <mat-form-field>
+                <input [(ngModel)]="estate.street" name="street" matInput placeholder="Calle">
+            </mat-form-field>
+            <mat-form-field>
+                <input [(ngModel)]="estate.number" name="number" matInput placeholder="Numero">
+            </mat-form-field>
+            <mat-form-field>
+                <input [(ngModel)]="estate.floor" name="floor" matInput placeholder="Piso">
+            </mat-form-field>
+            <mat-form-field>
+                <input [(ngModel)]="estate.department" name="department" matInput placeholder="Departamento">
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button *ngIf="estate.id" (click)='api.putEstate(estate)' mat-button>Actualizar Inmueble</button>
+        <button *ngIf="estate.id" (click)='estate = {}' mat-button>Nuevo Inmueble</button>
+        <button *ngIf="!estate.id" (click)='post(estate)' mat-button>Guardar Inmueble</button>
+    </mat-card-actions>
+</mat-card>

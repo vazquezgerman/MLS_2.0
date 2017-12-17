@@ -6,30 +6,30 @@ import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class ApiService {
 
-    private selectedProperty = new Subject<any>();
-    propertySelected =  this.selectedProperty.asObservable();
+    private selectedEstate = new Subject<any>();
+    EstateSelected =  this.selectedEstate.asObservable();
 
     constructor(private http: HttpClient) { }
 
-    postCalle(calle) {
-        this.http.post('http://localhost:54645/api/Property', calle).subscribe(res => {
+    postEstate(estate) {
+        this.http.post('http://localhost:54645/api/Estate', estate).subscribe(res => {
             console.log(res)
         })
     }
 
-    putCalle(calle)
+    putEstate(estate)
     {
-        this.http.put(`http://localhost:54645/api/Property/${calle.id}`, calle).subscribe(res => {
+        this.http.put(`http://localhost:54645/api/Estate/${estate.id}`, estate).subscribe(res => {
             console.log(res)
         })
     }
 
-    selectProperty(calle)
+    selectEstate(estate)
     {
-        this.selectedProperty.next(calle);
+        this.selectedEstate.next(estate);
     }
 
-    getCalles() {
-        return this.http.get('http://localhost:54645/api/Property');
+    getEstates() {
+        return this.http.get('http://localhost:54645/api/Estate');
     }
 }

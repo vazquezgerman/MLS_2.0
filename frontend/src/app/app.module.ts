@@ -7,21 +7,21 @@ import { FormsModule } from '@angular/forms'
 import { RouterModule } from '@angular/router'
 
 import { AppComponent } from './app.component'
-import { QuestionComponent } from './question.component'
+import { EstateComponent } from './estate.component'
 import { ApiService } from './api.service';
-import { QuestionsComponent } from './questions.component'
+import { EstatesComponent } from './estates.component'
 import { HomeComponent } from './home.component'
 import { NavComponent } from './nav.component'
 
 const routers = [
   { path: '', component: HomeComponent },
-  { path: 'calle', component: QuestionComponent },
-  { path: 'calles', component: QuestionsComponent },
+  { path: 'estate', component: EstateComponent },
+  { path: 'estates', component: EstatesComponent },
 ]
 
 @NgModule({
   declarations: [
-    AppComponent, QuestionComponent, QuestionsComponent, HomeComponent, NavComponent
+    AppComponent, EstateComponent, EstatesComponent, HomeComponent, NavComponent
   ],
   imports: [
     BrowserModule, 
@@ -30,7 +30,7 @@ const routers = [
     BrowserAnimationsModule, 
     MatButtonModule, 
     MatInputModule, 
-    MatCardModule, 
+    MatCardModule,    
     FormsModule,
     MatListModule,
     MatToolbarModule

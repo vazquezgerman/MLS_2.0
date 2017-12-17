@@ -1,11 +1,11 @@
 
 
 import { Component } from '@angular/core';
-import { QuestionComponent } from './question.component'
+import { EstateComponent } from './estate.component'
 
 @Component({
   selector: 'app-root',
-  template: '<question></question><questions></questions>',
+  template: '<estate></estate><estates></estates>',
 })
 export class HomeComponent {
 }

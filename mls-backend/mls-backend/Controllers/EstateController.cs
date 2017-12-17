@@ -9,19 +9,19 @@ using Microsoft.EntityFrameworkCore;
 namespace mls_backend.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Property")]
-    public class PropertyController : Controller
+    [Route("api/Estate")]
+    public class EstateController : Controller
     {
         readonly MLSContext context;
 
-        public PropertyController (MLSContext context)
+        public EstateController (MLSContext context)
         {
             this.context = context;
         }
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<Models.Property> Get()
+        public IEnumerable<Models.Estate> Get()
         {
             return context.Property;
             
@@ -29,7 +29,7 @@ namespace mls_backend.Controllers
 
         // POST api/values
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody]Models.Property property)
+        public async Task<IActionResult> Post([FromBody]Models.Estate property)
         {
             context.Property.Add(property);
             await context.SaveChangesAsync();
@@ -37,7 +37,7 @@ namespace mls_backend.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, [FromBody]Models.Property property)
+        public async Task<IActionResult> Put(int id, [FromBody]Models.Estate property)
         {
             if (id != property.ID)
                 return BadRequest();

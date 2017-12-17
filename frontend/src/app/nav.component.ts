@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { QuestionComponent } from './question.component'
+import { EstateComponent } from './estate.component'
+
 
 @Component({
     selector: 'nav',
     template: `<mat-toolbar>
         <button mat-button routerLink="/">MLS</button>
-        <button mat-button routerLink="/calle">Carga de Inmuebles</button>
-        <button mat-button routerLink="/calles">Mis Inmuebles</button>
+        <button mat-button routerLink="/estate">Carga de Inmuebles</button>
+        <button mat-button routerLink="/estates">Mis Inmuebles</button>
         </mat-toolbar>`
 })
 export class NavComponent {

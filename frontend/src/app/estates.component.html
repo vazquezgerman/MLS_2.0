@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-title>
+        <span>Mis Inmueble</span>
+    </mat-card-title>
+    <mat-card-content>
+        <mat-list *ngFor="let estate of estates">
+            <mat-list-item class="clickLink" (click)="api.selectEstate(estate)">
+                {{estate.street}} {{estate.number}} Piso: {{estate.floor}} Departamento: {{estate.department}}
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+    <mat-card-actions>
+    </mat-card-actions>
+</mat-card>
