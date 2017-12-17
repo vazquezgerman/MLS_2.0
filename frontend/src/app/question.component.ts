@@ -11,6 +11,10 @@ export class QuestionComponent {
     
     constructor(private api: ApiService) {}
 
+    ngOnInit() {
+        this.api.propertySelected.subscribe(calle => this.calle = calle)
+    }
+
     post(calle) {
         this.api.postCalle(calle)    
     }

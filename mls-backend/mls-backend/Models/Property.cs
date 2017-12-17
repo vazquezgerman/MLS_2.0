@@ -9,5 +9,8 @@ namespace mls_backend.Models
     {
         public int ID { get; set; }
         public string Calle { get; set; }
+        public string Numero { get; set; }
+        public string Piso { get; set; }
+        public string Departamento { get; set; }
     }
 }

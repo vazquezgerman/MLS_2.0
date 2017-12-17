@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace mls_backend.Controllers
 {
@@ -22,19 +23,30 @@ namespace mls_backend.Controllers
         [HttpGet]
         public IEnumerable<Models.Property> Get()
         {
-            return new Models.Property[] {
-                new Models.Property() { Calle = "San Lorenzo"},
-                new Models.Property() { Calle = "Brown"},
-                new Models.Property() { Calle = "Moreno"},
-            };
+            return context.Property;
+            
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]Models.Property calle)
+        public async Task<IActionResult> Post([FromBody]Models.Property property)
         {
-            context.Property.Add(new Models.Property() { Calle = "test" });
-            context.SaveChanges();
+            context.Property.Add(property);
+            await context.SaveChangesAsync();
+            return Ok(property);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(int id, [FromBody]Models.Property property)
+        {
+            if (id != property.ID)
+                return BadRequest();
+
+            context.Entry(property).State = EntityState.Modified;
+
+            await context.SaveChangesAsync();
+
+            return Ok(property);
         }
     }
 }
