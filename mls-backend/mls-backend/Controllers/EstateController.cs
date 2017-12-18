@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -20,20 +21,28 @@ namespace mls_backend.Controllers
         }
 
         // GET api/values
+        [Authorize]
         [HttpGet]
         public IEnumerable<Models.Estate> Get()
         {
-            return context.Property;
+            var userId = HttpContext.User.Claims.First().Value;
+
+            return context.Estate.Where(e => e.OwnerId == userId);
             
         }
 
         // POST api/values
+        [Authorize]
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody]Models.Estate property)
+        public async Task<IActionResult> Post([FromBody]Models.Estate estate)
         {
-            context.Property.Add(property);
+            var userId = HttpContext.User.Claims.First().Value;
+
+            estate.OwnerId = userId;
+
+            context.Estate.Add(estate);
             await context.SaveChangesAsync();
-            return Ok(property);
+            return Ok(estate);
         }
 
         [HttpPut("{id}")]

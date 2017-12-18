@@ -1,5 +1,3 @@
-
-
 import { Component } from '@angular/core';
 import { EstateComponent } from './estate.component'
 

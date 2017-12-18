@@ -13,6 +13,6 @@ namespace mls_backend
 
         }
 
-        public DbSet<Models.Estate> Property { get; set; }
+        public DbSet<Models.Estate> Estate { get; set; }
     }
 }
