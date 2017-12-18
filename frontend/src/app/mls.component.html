@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-title>
+        <span *ngIf="mls.id">Editar mls</span>
+        <span *ngIf="!mls.id">Nuevo mls</span>
+    </mat-card-title>
+    <mat-card-content>
+        <form>
+            <mat-form-field>
+                <input [(ngModel)]="mls.title" name="title" matInput placeholder="Titulo mls">
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button *ngIf="estate.id" (click)="null" mat-button>Actualizar Inmueble</button>
+        <button *ngIf="estate.id" (click)="null" mat-button>Nuevo Inmueble</button>
+        <button *ngIf="!estate.id" (click)="null" mat-button>Guardar Inmueble</button>
+    </mat-card-actions>
+</mat-card>

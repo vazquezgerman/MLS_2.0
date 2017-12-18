@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace mls_backend
 {
@@ -30,6 +31,9 @@ namespace mls_backend
             }));
 
             services.AddDbContext<MLSContext>(opt => opt.UseInMemoryDatabase("MLS"));
+            services.AddDbContext<UserDbContext>(opt => opt.UseInMemoryDatabase("user"));
+
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<UserDbContext>();
 
             services.AddMvc();
         }

@@ -12,5 +12,7 @@ namespace mls_backend.Models
         public string Number { get; set; }
         public string Floor { get; set; }
         public string Department { get; set; }
+        public int CoveredSquareMeters { get; set; }
+        public int Price { get; set; }
     }
 }
